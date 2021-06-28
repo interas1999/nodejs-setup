@@ -8,6 +8,7 @@ module.exports = {
   }),
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.ts'],
+  coveragePathIgnorePatterns: ['Controller.ts'],
   coverageDirectory: 'coverage',
   coverageReporters: ['text-summary', 'lcov'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
