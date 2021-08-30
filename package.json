@@ -41,14 +41,15 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@prisma/client": "2.23.0",
+    "@prisma/client": "^2.30.2",
     "@types/bcryptjs": "^2.4.2",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "date-fns": "^2.23.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "prisma": "2.23.0",
+    "prisma": "^2.30.2",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^4.0.1",
     "socket.io-client": "^4.0.1",

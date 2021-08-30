@@ -10,10 +10,21 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model users {
-  id         String   @id
-  name       String
-  password   String
-  email      String   @unique
+model enterprise {
+  id      String    @id
+  name    String    @unique
+  contact contact[]
+}
+
+model contact {
+  id     String @id
+  number String
+
+  last_attendance DateTime?
+
   created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+
+  enterprise   enterprise @relation(fields: [enterpriseId], references: [id])
+  enterpriseId String
 }

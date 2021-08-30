@@ -1,8 +1,10 @@
 import { Router } from 'express'
-import { usersRoutes } from './users.routes'
+import { contactRoutes } from './contact.routes'
+import { enterpriseRoutes } from './enterprise.routes'
 
 const routes = Router()
 
-routes.use('/users', usersRoutes)
+routes.use('/contacts', contactRoutes)
+routes.use('/enterprises', enterpriseRoutes)
 
 export { routes }
