@@ -7,7 +7,7 @@ module.exports = {
     prefix: '<rootDir>/src/'
   }),
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.ts'],
+  collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/**/*.ts'],
   coveragePathIgnorePatterns: ['Controller.ts'],
   coverageDirectory: 'coverage',
   coverageReporters: ['text-summary', 'lcov'],
