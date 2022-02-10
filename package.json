@@ -7,7 +7,7 @@
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify --exit-child src/server.ts",
+    "dev": "dotenv -e .env.dev -- ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify --exit-child src/server.ts",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
     "migrate:ci": "dotenv -e .env.ci -- npx prisma migrate dev --name postgres-init",
@@ -52,7 +52,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@prisma/client": "^2.30.2",
+    "@prisma/client": "^3.9.2",
     "@types/bcryptjs": "^2.4.2",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
@@ -62,7 +62,7 @@
     "dotenv-cli": "^4.1.1",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "prisma": "^3.8.1",
+    "prisma": "^3.9.2",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^4.0.1",
     "socket.io-client": "^4.0.1",
