@@ -20,7 +20,7 @@
     "test:unit": "yarn docker:up && yarn migrate:test && dotenv -e .env.test -- jest src/modules/users/useCases/User/ChangePassword/ChangePasswordController.spec.ts --runInBand --forceExit --detectOpenHandles || yarn docker:down",
     "prisma:studio": "dotenv -e .env.dev -- prisma studio --browser none",
     "prisma:seed:dev": "dotenv -e .env.dev -- prisma db seed",
-    "commit": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+    "commit": "git-cz"
   },
   "husky": {
     "hooks": {
