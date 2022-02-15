@@ -19,7 +19,13 @@
     "test:ci": "dotenv -e .env.ci -- jest --runInBand --forceExit --detectOpenHandles",
     "test:unit": "yarn docker:up && yarn migrate:test && dotenv -e .env.test -- jest src/modules/users/useCases/User/ChangePassword/ChangePasswordController.spec.ts --runInBand --forceExit --detectOpenHandles || yarn docker:down",
     "prisma:studio": "dotenv -e .env.dev -- prisma studio --browser none",
-    "prisma:seed:dev": "dotenv -e .env.dev -- prisma db seed"
+    "prisma:seed:dev": "dotenv -e .env.dev -- prisma db seed",
+    "commit": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+    }
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
